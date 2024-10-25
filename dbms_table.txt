@@ -1,1 +1,115 @@
 CREATE DATABASE project;
+CREATE TABLE Lecture(
+    Lecture_id CHAR(6),
+    Lecture_name VARCHAR(50),
+    Gender CHAR(1),
+    Email VARCHAR(50),
+    Address VARCHAR(70),
+    Birth_day DATE,
+    PRIMARY KEY(Lecture_id)
+    
+);
+
+
+CREATE TABLE Lecture_phonenumber(
+    Lecture_id CHAR(6),
+    Phone_number CHAR(10),
+    FOREIGN KEY(Lecture_id) REFERENCES Lecture(Lecture_id)
+
+
+);
+
+CREATE TABLE USER(
+    NIC INT,
+    Name VARCHAR(50),
+    Role VARCHAR(15),
+    PRIMARY KEY(Nic)
+    
+);
+
+
+INSERT INTO USER
+VALUES
+   (1020,"W.K.L.M.Kumara","Lecture"),
+   (1026,"F.K.Fatheema","Lecture"),
+   (2048,"S.Subramanium","Lecture"),
+   (3048,"K.M.Mallika","Lecture"),
+   (4040,"W.M.S.Perera","Lecture"),
+   (5020,"G.H.W.Kumara","Lecture"),
+   (5238,"B.N.S.Lakmal","Lecture"),
+   (6439,"P.C.P.Premathilaka","Lecture"),
+   (6869,"N.M.Shehara","Lecture"),
+   (6687,"K.K.Silva","Lecture"),
+   (6940,"G.H.M.Sunanda","Lecture"),
+   (6980,"M.Nadiya","Lecture"),
+   (7888,"K.M.Sureka","Lecture"),
+   (7950,"N.N.Ranaweera","Lecture"),
+   (8100,"S.S.Kamal","Lecture"),
+   (8109,"H.N.K.Siril","Lecture");
+
+
+
+INSERT INTO Lecture 
+VALUES
+   ('LE011', 'W.K.L.M.Kumara', 'M', 'lalith.kumara@ruh.ac.lk', 'No. 25, Colombo 07', '1980-05-15'),
+   ('LE012', 'F.K.Fatheema', 'F', 'fatheemaff@ruh.ac.lk', 'No. 12, Galle Road, Colombo 03', '1985-11-23'),
+   ('LE023', 'S.Subramanium', 'M', 'subramaniums@eruh.ac.lk', 'No. 78, Kandy Road, Kandy', '1978-03-09'),
+   ('LE034', 'K.M.Mallika', 'F', 'mallika.k@ruh.ac.lk', 'No. 52, Matara', '1982-08-17'),
+   ('LE035', 'W.M.S.Perera', 'F', 'pererasumudu@ruh.ac.lk', 'No. 44, Negombo Road, Wattala', '1986-12-05'),
+   ('LE046', 'G.H.W.Kumara', 'M', 'kumarag076@ruh.ac.lk', 'No. 10, Gampaha', '1988-04-22'),
+   ('LE047', 'B.N.S.Lakmal', 'M', 'nimeshlakmal@ruh.ac.lk', 'No. 95, Dehiwala', '1981-01-12'),
+   ('LE058', 'P.C.P.Premathilaka', 'F', 'premathilakacpp@ruh.ac.lk', 'No. 33, Kurunegala', '1987-07-28'),
+   ('LE069', 'N.M.Shehara', 'F', 'shehara.nulakshi@ruh.ac.lk', 'No. 5, Panadura', '1979-09-14'),
+   ('LE080', 'K.K.Silva', 'M', 'silva.k099@ruh.ac.lk', 'No. 18, Anuradhapura', '1984-06-30'),
+   ('LE088', 'G.H.M.Sunanda', 'M', 'sunandaguruge@ruh.ac.lk', 'No.3/7/B,Kandy', '1984-10-15'),
+   ('LE091', 'M.Nadiya', 'F', 'nadiyam122@ruh.ac.lk', 'No.1o,Nugawela Road,Galle', '1986-05-29'),
+   ('LE092', 'K.M.Sureka', 'F', 'surekamadumali@ruh.ac.lk', 'Main street,Matara', '1990-07-23'),
+   ('LE093', 'N.N.Ranaweera', 'M', 'ranaweera122@ruh.ac.lk', 'No.21,Sawisthripura,Anuradhapura', '1992-11-11'),
+   ('LE095', 'S.S.Kamal', 'M', 'kamalss@ruh.ac.lk', 'Anuradhapura road,Kurunegala', '1985-03-17');
+   
+
+
+INSERT INTO Lecture_phonenumber
+VALUES
+   ('LE011', '071-1563568'),
+   ('LE012', '076-5467666'),
+   ('LE023', '074-5623345'),
+   ('LE034', '077-8946344'),
+   ('LE035', '071-2347899'),
+   ('LE046', '071-1578928'),
+   ('LE047', '077-8812458'),
+   ('LE058', '070-9867467'),
+   ('LE069', '070-9456678'),
+   ('LE080', '072-3567833'),
+   ('LE088', '074-6578933'),
+   ('LE091', '077-7773221'),
+   ('LE092', '077-1234483'),
+   ('LE093', '070-4895322'),
+   ('LE095', '071-5678953'),
+   ('LE011', '071-1112354'),
+   ('LE012', '035-6782143'),
+   ('LE023', '046-7812456'),
+   ('LE034', '036-1289475'),
+   ('LE035', '096-7812563'),
+   ('LE046', '067-4563289'),
+   ('LE047', '034-6793276'),
+   ('LE058', '078-4536292'),
+   ('LE069', '071-2374527'),
+   ('LE080', '078-5638292'),
+   ('LE088', '045-6783458'),
+   ('LE091', '045-8923454'),
+   ('LE092', '067-8927433'),
+   ('LE093', '078-6120764'),
+   ('LE095', '070-8059200');
+
+
+
+
+
+
+
+
+
+
+
+
