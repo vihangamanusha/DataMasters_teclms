@@ -1,1 +1,12 @@
 CREATE DATABASE project;
+CREATE TABLE Student(
+	Student_id CHAR(15),
+	NIC INT,
+	Student_name VARCHAR(50),
+	Address VARCHAR(70),
+	Email VARCHAR(70),
+	Phone_number VARCHAR(12),
+	Gender CHAR(1),                                                           
+	Date_of_birth DATE,
+	Status VARCHAR(10),
+	PRIMARY KEY(Student_id));
