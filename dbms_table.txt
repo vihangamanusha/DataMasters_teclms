@@ -51,21 +51,33 @@ VALUES
 
 INSERT INTO Lecture 
 VALUES
-   ('LE011', 'W.K.L.M.Kumara', 'M', 'lalith.kumara@ruh.ac.lk', 'No. 25, Colombo 07', '1980-05-15'),
-   ('LE012', 'F.K.Fatheema', 'F', 'fatheemaff@ruh.ac.lk', 'No. 12, Galle Road, Colombo 03', '1985-11-23'),
-   ('LE023', 'S.Subramanium', 'M', 'subramaniums@eruh.ac.lk', 'No. 78, Kandy Road, Kandy', '1978-03-09'),
-   ('LE034', 'K.M.Mallika', 'F', 'mallika.k@ruh.ac.lk', 'No. 52, Matara', '1982-08-17'),
-   ('LE035', 'W.M.S.Perera', 'F', 'pererasumudu@ruh.ac.lk', 'No. 44, Negombo Road, Wattala', '1986-12-05'),
-   ('LE046', 'G.H.W.Kumara', 'M', 'kumarag076@ruh.ac.lk', 'No. 10, Gampaha', '1988-04-22'),
-   ('LE047', 'B.N.S.Lakmal', 'M', 'nimeshlakmal@ruh.ac.lk', 'No. 95, Dehiwala', '1981-01-12'),
-   ('LE058', 'P.C.P.Premathilaka', 'F', 'premathilakacpp@ruh.ac.lk', 'No. 33, Kurunegala', '1987-07-28'),
-   ('LE069', 'N.M.Shehara', 'F', 'shehara.nulakshi@ruh.ac.lk', 'No. 5, Panadura', '1979-09-14'),
-   ('LE080', 'K.K.Silva', 'M', 'silva.k099@ruh.ac.lk', 'No. 18, Anuradhapura', '1984-06-30'),
-   ('LE088', 'G.H.M.Sunanda', 'M', 'sunandaguruge@ruh.ac.lk', 'No.3/7/B,Kandy', '1984-10-15'),
-   ('LE091', 'M.Nadiya', 'F', 'nadiyam122@ruh.ac.lk', 'No.1o,Nugawela Road,Galle', '1986-05-29'),
-   ('LE092', 'K.M.Sureka', 'F', 'surekamadumali@ruh.ac.lk', 'Main street,Matara', '1990-07-23'),
-   ('LE093', 'N.N.Ranaweera', 'M', 'ranaweera122@ruh.ac.lk', 'No.21,Sawisthripura,Anuradhapura', '1992-11-11'),
-   ('LE095', 'S.S.Kamal', 'M', 'kamalss@ruh.ac.lk', 'Anuradhapura road,Kurunegala', '1985-03-17');
+   ('LE010', 'W.K.L.M.Kumara', 'M', 'lalith.kumara@ruh.ac.lk', 'No. 25, Colombo 07', '1980-05-15'),
+   ('LE011', 'F.K.Fatheema', 'F', 'fatheemaff@ruh.ac.lk', 'No. 12, Galle Road, Colombo 03', '1985-11-23'),
+   ('LE012', 'S.Subramanium', 'M', 'subramaniums@eruh.ac.lk', 'No. 78, Kandy Road, Kandy', '1978-03-09'),
+   ('LE013', 'K.M.Mallika', 'F', 'mallika.k@ruh.ac.lk', 'No. 52, Matara', '1982-08-17'),
+   ('LE014', 'W.M.S.Perera', 'F', 'pererasumudu@ruh.ac.lk', 'No. 44, Negombo Road, Wattala', '1986-12-05'),
+   ('LE015', 'G.H.W.Kumara', 'M', 'kumarag076@ruh.ac.lk', 'No. 10, Gampaha', '1988-04-22'),
+   ('LE016', 'B.N.S.Lakmal', 'M', 'nimeshlakmal@ruh.ac.lk', 'No. 95, Dehiwala', '1981-01-12'),
+   ('LE017', 'P.C.P.Premathilaka', 'F', 'premathilakacpp@ruh.ac.lk', 'No. 33, Kurunegala', '1987-07-28'),
+   ('LE018', 'N.M.Shehara', 'F', 'shehara.nulakshi@ruh.ac.lk', 'No. 5, Panadura', '1979-09-14'),
+   ('LE019', 'K.K.Silva', 'M', 'silva.k099@ruh.ac.lk', 'No. 18, Anuradhapura', '1984-06-30'),
+   ('LE020', 'G.H.M.Sunanda', 'M', 'sunandaguruge@ruh.ac.lk', 'No.3/7/B,Kandy', '1984-10-15'),
+   ('LE021', 'M.Nadiya', 'F', 'nadiyam122@ruh.ac.lk', 'No.1o,Nugawela Road,Galle', '1986-05-29'),
+   ('LE022', 'K.M.Sureka', 'F', 'surekamadumali@ruh.ac.lk', 'Main street,Matara', '1990-07-23'),
+   ('LE023', 'N.N.Ranaweera', 'M', 'ranaweera122@ruh.ac.lk', 'No.21,Sawisthripura,Anuradhapura', '1992-11-11'),
+   ('LE024', 'S.S.Kamal', 'M', 'kamalss@ruh.ac.lk', 'Anuradhapura road,Kurunegala', '1985-03-17'),   
+   ('LE025', 'D.K. Jayawardena', 'F', 'jayawardena.dk@ruh.ac.lk', 'No. 45, Panadura', '1987-04-23'),
+   ('LE026', 'A.S. Perera', 'M', 'perera.as@ruh.ac.lk', 'No. 67, Kalmunai', '1985-07-14'),
+   ('LE027', 'L.T. Fernando', 'F', 'fernando.lt@ruh.ac.lk', 'No. 32, Ratnapura', '1988-10-21'),
+   ('LE028', 'H.P. de Silva', 'M', 'desilva.hp@ruh.ac.lk', 'No. 11, Badulla', '1975-06-30'),
+   ('LE029', 'G.W. Karunaratne', 'F', 'karunaratne.gw@ruh.ac.lk', 'No. 85, Hambantota', '1992-03-18'),
+   ('LE030', 'M.S. Ranasinghe', 'M', 'ranasinghe.ms@ruh.ac.lk', 'No. 28, Jaffna', '1979-08-25'),
+   ('LE031', 'T.R. Rajapaksa', 'M', 'rajapaksa.tr@ruh.ac.lk', 'No. 39, Kotte', '1983-05-22'),
+   ('LE032', 'N.M. Abeysinghe', 'F', 'abeysinghe.nm@ruh.ac.lk', 'No. 66, Vavuniya', '1981-12-03'),
+   ('LE033', 'S.P. Kularathna', 'F', 'kularathna.sp@ruh.ac.lk', 'No. 14, Moratuwa', '1986-02-09'),
+   ('LE034', 'W.R. Samarasinghe', 'M', 'samarasinghe.wr@ruh.ac.lk', 'No. 22, Galle', '1989-11-29'),
+   ('LE035', 'K.D. Amarasinghe', 'F', 'amarasinghe.kd@ruh.ac.lk', 'No. 8, Nugegoda', '1982-01-16');
+
    
 
 
