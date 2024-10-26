@@ -102,6 +102,8 @@ VALUES
    ('LE093', '078-6120764'),
    ('LE095', '070-8059200');
 
+/*create view final grade */
+
 
 
 
