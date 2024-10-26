@@ -5,3 +5,13 @@ CREATE TABLE Department (
     contact_number VARCHAR(15),
     email VARCHAR(100)
 );
+
+--Adding data to department table
+
+INSERT INTO Department
+VALUES
+('DpMUL','department of multidecepleanery','ABC','046-2545655','dep_mul@fot.ruh.ac.lk'),
+('DpICT','department of information and communication technology','def','046-8857625','dep_ict@fot.ruh.ac.lk'),
+('DpENT','department of engineering technology','ghi','046-2314569','dep_et@fot.ruh.ac.lk'),
+('DpBST','department of boisystem technology','jkl','046-2154698','dep_bst@fot.ruh.ac.lk')
+;
