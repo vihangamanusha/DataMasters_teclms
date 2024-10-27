@@ -163,32 +163,27 @@ VALUES
 
 CREATE VIEW Student_grades AS
 SELECT 
-   Student.Student_id,
-   Student.Student_name,
-   Course.Course_code,
-   final.final_marks,
+   Final_Marks.student_id,
+   Final_Marks.course_code,
+   Final_Marks.total_marks,
    CASE
-     WHEN v.final_marks>=90 THEN 'A+'
-     WHEN v.final_marks>=85 THEN 'A'
-     WHEN v.final_marks>=80 THEN 'A-'
-     WHEN v.final_marks>=75 THEN 'B+'
-     WHEN v.final_marks>=70 THEN 'B'
-     WHEN v.final_marks>=65 THEN 'B-'
-     WHEN v.final_marks>=60 THEN 'C+'
-     WHEN v.final_marks>=55 THEN 'C'
-     WHEN v.final_marks>=50 THEN 'C-'
-     WHEN v.final_marks>=45 THEN 'D+'
-     WHEN v.final_marks>=40 THEN 'D+'
-     WHEN v.final_marks>=35 THEN 'D'
-     WHEN v.final_marks>=30 THEN 'E'
+     WHEN total_marks>=90 THEN 'A+'
+     WHEN total_marks>=85 THEN 'A'
+     WHEN total_marks>=80 THEN 'A-'
+     WHEN total_marks>=75 THEN 'B+'
+     WHEN total_marks>=70 THEN 'B'
+     WHEN total_marks>=65 THEN 'B-'
+     WHEN total_marks>=60 THEN 'C+'
+     WHEN total_marks>=55 THEN 'C'
+     WHEN total_marks>=50 THEN 'C-'
+     WHEN total_marks>=45 THEN 'D+'
+     WHEN total_marks>=40 THEN 'D+'
+     WHEN total_marks>=35 THEN 'D'
+     WHEN total_marks>=30 THEN 'E'
      ELSE 'F'
    END AS grade
 FROM 
-    student
-JOIN 
-    course ON Student.student_id = Student.student_id
-JOIN 
-    final_marks ON s.student_id = fm.student_id AND c.course_id = fm.course_id;
+    Final_Marks;
 
 
 
