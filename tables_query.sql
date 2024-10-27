@@ -263,3 +263,36 @@ VALUES
     (85, 53, 81, 76, 82, 14, 87, 83, 'TG/2022/1190', 'TMS1223', 'DpICT'),
     (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'TG/2022/1345', 'TMS1223', 'DpICT'), 
     (20, 25, 30, 35, 28, 29, 31, 30, 'TG/2021/1155', 'TMS1223', 'DpICT');  
+
+
+-- create CA_Marks and Final_marks views
+
+
+CREATE VIEW CA_Marks AS
+SELECT 
+    stu_id AS student_id,
+    course_code AS course_code,
+    (quiz1 + quiz2 + quiz3 + mid_theory + mid_practical) AS total_ca_marks,
+    CASE 
+        WHEN (quiz1 + quiz2 + quiz3 + mid_theory + mid_practical) > 19.5 
+        THEN 'CA_pass' 
+        ELSE 'CA_fail' 
+    END AS ca_status
+FROM 
+    Exam_Marks;
+
+
+
+
+
+
+
+
+
+CREATE VIEW Final_Marks AS
+SELECT 
+    stu_id AS student_id,
+    course_code AS course_code,
+    (quiz1 + quiz2 + quiz3 + mid_theory + mid_practical + end_theory + end_practical) AS total_marks
+FROM 
+    Exam_Marks;
