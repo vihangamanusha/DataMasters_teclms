@@ -1,12 +1,42 @@
-CREATE DATABASE project;
 CREATE TABLE Student(
 	Student_id CHAR(15),
 	NIC INT,
+	Dep_id CHAR(7),
 	Student_name VARCHAR(50),
 	Address VARCHAR(70),
-	Email VARCHAR(70),
+	Email VARCHAR(50),
 	Phone_number VARCHAR(12),
 	Gender CHAR(1),                                                           
 	Date_of_birth DATE,
 	Status VARCHAR(10),
-	PRIMARY KEY(Student_id));
+	PRIMARY KEY(Student_id));                                         
+
+INSERT INTO Student
+(Student_id,NIC,Student_name,Address,Email,Phone_number,Gender,Date_of_birth,Status)
+VALUES
+("TG/2021/1155",1015,"DpICT","G.B.K.Sameera","B36/1,Kamburupitiya,Mathara","sameera_20211155@fot.ruh.ac.lk","071-1234567","M","2001/07/15","repeat"),
+("TG/2021/1293",1136,"DpENT","A.P.kamindu","279,Maradana,Colombo","kamindu_20211155@fot.ruh.ac.lk","077-9876543","M","2000/08/02","repeat"),
+("TG/2021/1234",1284,"DpENT","R.M.Saranga","No 12, Galle Road, Galle","saranga_20211234@fot.ruh.ac.lk","075-5432198","M","2000/04/09","repeat"),
+("TG/2021/1510",1365,"DpBST","S.N.Rajitha","16/5, Lake Road, Kandy","rajitha_20211210@fot.ruh.ac.lk","071-9988776","F","2001/11/21","repeat"),
+("TG/2021/1332",1689,"DpBST","L.K.Nuwan","21/A, Main Street, Jaffna","nuwan_20211332@fot.ruh.ac.lk","071-9988776","M","2000/02/14","repeat"),
+
+("TG/2022/1122",2089,"DpICT","S.M.Priyantha","No 12, Galle Road, Galle","priyantha_20211122@fot.ruh.ac.lk","074-5432987","M","2002/09/25","proper"),
+("TG/2022/1147",9516,"DpICT","K.W.Chathurika","14, Maligawatte, Colombo","chathurika_20211147@fot.ruh.ac.lk","070-1122334","F","2002/02/14","proper"),
+("TG/2022/1305",3208,"DpICT","H.A.M.Dilshan","5/A, Panadura Road, Kalutara","dilshan_20211305@fot.ruh.ac.lk","078-3456123","M","2002/11/01","proper"),
+("TG/2022/1188",1278,"DpICT","P.R.Nadeesha","No 65, Matara Road, Weligama","nadeesha_20211188@fot.ruh.ac.lk","072-9876543","F","2002/03/19","proper"),
+("TG/2022/1190",9856,"DpICT","U.D.Dinusha","3/4, Maharagama Road, Colombo","dinusha_20211190@fot.ruh.ac.lk","076-5566778","M","2002/10/07","proper"),
+("TG/2022/1210",2356,"DpENT","V.P.Kavindi","48, Hospital Road, Jaffna","kavindi_20211210@fot.ruh.ac.lk","077-8901234","F","2002/12/15","proper"),
+("TG/2022/1325",9267,"DpENT","C.S.Perera","18/B, Station Road, Negombo","perera_20211325@fot.ruh.ac.lk","071-4455667","M","2002/07/23","proper"),
+("TG/2022/1288",2399,"DpENT","N.W.Mahesha","4/A, High Street, Kandy","mahesha_20211288@fot.ruh.ac.lk","070-9876543","F","2001/05/04","proper"),
+("TG/2022/1105",8966,"DpENT","L.P.Kasun","7/9, Nuwara Eliya Road, Hatton","kasun_20211105@fot.ruh.ac.lk","071-8765432","M","2002/01/10","proper"),
+("TG/2022/1246",2150,"DpENT","R.N.Priyadarshani","51, Beach Road, Hambantota","priyadarshani_20211246@fot.ruh.ac.lk","072-7654321","F","2002/06/08","proper"),
+("TG/2022/1258",2435,"DpBST","K.M.Chamika","No 21, Railway Avenue, Kegalle","chamika_20211258@fot.ruh.ac.lk","073-6543210","M","2002/09/20","proper"),
+("TG/2022/1233",8750,"DpBST","S.W.Nethmi","5/B, Kurunegala Road, Puttalam","nethmi_20211233@fot.ruh.ac.lk","074-5432109","F","2002/04/17","proper"),
+("TG/2022/1177",2401,"DpBST","A.G.Tharindu","23, Lake Drive, Nuwara Eliya","tharindu_20211177@fot.ruh.ac.lk","075-4321098","M","2002/08/28","proper"),
+("TG/2022/1195",3671,"DpBST","D.W.Shanika","No 9, Koggala Road, Galle","shanika_20211195@fot.ruh.ac.lk","076-3210987","F","2001/05/11","proper"),
+("TG/2022/1314",2112,"DpBST","H.P.Manishka","77, Kalutara Road, Panadura","manishka_20211314@fot.ruh.ac.lk","077-2109876","M","2002/10/23","proper"),
+
+("TG/2022/1345",3025,"DpICT","A.K.Sanjeewa","20, Main Street, Matara","sanjeewa_20221345@fot.ruh.ac.lk","077-6510930","M","2001/12/10","suspend"),
+("TG/2022/1598",3660,"DpENT","P.D.Shanika","3/5, Hospital Road, Negombo","shanika_20221598@fot.ruh.ac.lk","078-2563488","F","2002/09/14","suspend"),
+("TG/2022/1480",3254,"DpBST","R.T.Kavindu","7/C, Peradeniya Road, Kandy","kavindu_20221489@fot.ruh.ac.lk","075-1254836","M","2002/07/02","suspend");
+
