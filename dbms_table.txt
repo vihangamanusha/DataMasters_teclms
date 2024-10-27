@@ -45,7 +45,6 @@ VALUES
    (7888,"K.M.Sureka","Lecture"),
    (7950,"N.N.Ranaweera","Lecture"),
    (8100,"S.S.Kamal","Lecture"),
-   (8109,"H.N.K.Siril","Lecture"),
    (1015,"G.B.K.Sameera","Student"),
    (1136,"A.P.kamindu","Student"),
    (1284,"R.M.Saranga","Student"),
