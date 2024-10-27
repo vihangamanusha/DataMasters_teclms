@@ -24,3 +24,33 @@ SELECT
 FROM 
     Final_Marks;
 
+
+
+
+---------procedures-------------
+
+
+
+------start to create final_mark------
+
+CREATE PROCEDURE Final_mark(IN tg CHAR(15))
+BEGIN
+    SELECT *
+    FROM Final_Marks
+    WHERE student_id=tg;
+END//
+
+
+
+
+------start to create final_mark-------
+
+CREATE PROCEDURE Final_grade(IN tg CHAR(15))
+BEGIN
+    SELECT *
+    FROM Student_grades
+    WHERE student_id=tg;
+END//
+
+-----CALL Final_grade('TG/2022/1233')---
+
