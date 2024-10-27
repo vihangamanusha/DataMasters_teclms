@@ -26,13 +26,12 @@ CREATE TABLE Exam_Marks (
     mid_theory INT,
     end_practical INT,
     end_theory INT,
-    assesments INT,
+    assessments INT,
     stu_id CHAR(15) NOT NULL,
     course_code CHAR(10) NOT NULL,
     dep_id VARCHAR(10),
-    PRIMARY KEY (student_id, course_code)
+    PRIMARY KEY (stu_id, course_code)
 );
-
 --Add BST data to Exam_Marks Table
 
 
