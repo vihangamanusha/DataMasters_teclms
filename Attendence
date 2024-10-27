@@ -1,0 +1,9 @@
+CREATE TABLE Attendence(
+	Student_id CHAR(15),
+	Course_id CHAR(10),
+	Dep_id CHAR(7),
+	Session_date DATE,
+	Session_type VARCHAR(20),
+	Att_status VARCHAR(10),
+	Medical_id CHAR(8)
+);
