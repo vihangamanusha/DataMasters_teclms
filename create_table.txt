@@ -1,5 +1,6 @@
 CREATE TABLE Technical_officer(
 Technical_officer_id CHAR(7),
+NIC INT,
 Name VARCHAR(50),
 Email VARCHAR(50),
 Contact_number VARCHAR(12),
@@ -7,7 +8,6 @@ Department_id CHAR(7),
 Responsibility VARCHAR(100),
 PRIMARY KEY(Technical_officer_id)
 );
-
 
 
 CREATE TABLE Course_unit(
@@ -19,18 +19,19 @@ Theory_hours CHAR(7),
 Practical_hours CHAR(7),
 Lecture_in_charge CHAR(10),
 Department_id CHAR(10),
-PRIMARY KEY(Course_code)
+PRIMARY KEY(Course_code,Department_id)   
 );
-
 
 
 
 CREATE TABLE Medical_submission(
 Submission_id CHAR(10),
-Student_id CHAR(10),
+Student_id CHAR(15),
+Course_code CHAR(10),
+Department_id CHAR(10),
 Submission_date DATE,
-Affected_dates DATE,
+Start_date DATE,
+End_date DATE,
 Reasons VARCHAR(100),
-Status VARCHAR(20),
 PRIMARY KEY(Submission_id)
 );
