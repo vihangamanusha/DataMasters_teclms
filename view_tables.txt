@@ -1,1 +1,26 @@
 ----------------create view table final grade -----------------------
+
+CREATE VIEW Student_grades AS
+SELECT 
+   Final_Marks.student_id,
+   Final_Marks.course_code,
+   Final_Marks.total_marks,
+   CASE
+     WHEN total_marks>=90 THEN 'A+'
+     WHEN total_marks>=85 THEN 'A'
+     WHEN total_marks>=80 THEN 'A-'
+     WHEN total_marks>=75 THEN 'B+'
+     WHEN total_marks>=70 THEN 'B'
+     WHEN total_marks>=65 THEN 'B-'
+     WHEN total_marks>=60 THEN 'C+'
+     WHEN total_marks>=55 THEN 'C'
+     WHEN total_marks>=50 THEN 'C-'
+     WHEN total_marks>=45 THEN 'D+'
+     WHEN total_marks>=40 THEN 'D+'
+     WHEN total_marks>=35 THEN 'D'
+     WHEN total_marks>=30 THEN 'E'
+     ELSE 'F'
+   END AS grade
+FROM 
+    Final_Marks;
+
