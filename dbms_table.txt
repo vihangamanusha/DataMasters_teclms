@@ -30,7 +30,7 @@ CREATE TABLE USER(
 
 INSERT INTO USER
 VALUES
-    (1020,"W.K.L.M.Kumara","Lecture"),
+   (1020,"W.K.L.M.Kumara","Lecture"),
    (1026,"F.K.Fatheema","Lecture"),
    (2048,"S.Subramanium","Lecture"),
    (3048,"K.M.Mallika","Lecture"),
@@ -45,6 +45,17 @@ VALUES
    (7888,"K.M.Sureka","Lecture"),
    (7950,"N.N.Ranaweera","Lecture"),
    (8100,"S.S.Kamal","Lecture"),
+   (0021,"D.K.Jayawardena","Lecture"),
+   (0022,"A.S.Perera","Lecture"),
+   (0023,"L.T.Fernando","Lecture"),
+   (0024,"H.P.de Silva","Lecture"), 
+   (0025,"G.W.Karunaratne","Lecture"),
+   (0026,"M.S.Ranasinghe","Lecture"),
+   (0027,"T.R.Rajapaksa","Lecture"),
+   (0028,"N.M.Abeysinghe","Lecture"),
+   (0029,"S.P.Kularathna","Lecture"),
+   (0030,"W.R.Samarasinghe","Lecture"),
+   (0031,"K.D.Amarasinghe","Lecture"),
    (1015,"G.B.K.Sameera","Student"),
    (1136,"A.P.kamindu","Student"),
    (1284,"R.M.Saranga","Student"),
@@ -109,17 +120,17 @@ VALUES
    ('LE022', 'K.M.Sureka', 'F', 'surekamadumali@ruh.ac.lk', 'Main street,Matara', '1990-07-23'),
    ('LE023', 'N.N.Ranaweera', 'M', 'ranaweera122@ruh.ac.lk', 'No.21,Sawisthripura,Anuradhapura', '1992-11-11'),
    ('LE024', 'S.S.Kamal', 'M', 'kamalss@ruh.ac.lk', 'Anuradhapura road,Kurunegala', '1985-03-17'),   
-   ('LE025', 'D.K. Jayawardena', 'F', 'jayawardena.dk@ruh.ac.lk', 'No. 45, Panadura', '1987-04-23'),
-   ('LE026', 'A.S. Perera', 'M', 'perera.as@ruh.ac.lk', 'No. 67, Kalmunai', '1985-07-14'),
-   ('LE027', 'L.T. Fernando', 'F', 'fernando.lt@ruh.ac.lk', 'No. 32, Ratnapura', '1988-10-21'),
-   ('LE028', 'H.P. de Silva', 'M', 'desilva.hp@ruh.ac.lk', 'No. 11, Badulla', '1975-06-30'),
-   ('LE029', 'G.W. Karunaratne', 'F', 'karunaratne.gw@ruh.ac.lk', 'No. 85, Hambantota', '1992-03-18'),
-   ('LE030', 'M.S. Ranasinghe', 'M', 'ranasinghe.ms@ruh.ac.lk', 'No. 28, Jaffna', '1979-08-25'),
-   ('LE031', 'T.R. Rajapaksa', 'M', 'rajapaksa.tr@ruh.ac.lk', 'No. 39, Kotte', '1983-05-22'),
-   ('LE032', 'N.M. Abeysinghe', 'F', 'abeysinghe.nm@ruh.ac.lk', 'No. 66, Vavuniya', '1981-12-03'),
-   ('LE033', 'S.P. Kularathna', 'F', 'kularathna.sp@ruh.ac.lk', 'No. 14, Moratuwa', '1986-02-09'),
-   ('LE034', 'W.R. Samarasinghe', 'M', 'samarasinghe.wr@ruh.ac.lk', 'No. 22, Galle', '1989-11-29'),
-   ('LE035', 'K.D. Amarasinghe', 'F', 'amarasinghe.kd@ruh.ac.lk', 'No. 8, Nugegoda', '1982-01-16');
+   ('LE025', 'D.K.Jayawardena', 'F', 'jayawardena.dk@ruh.ac.lk', 'No. 45, Panadura', '1987-04-23'),
+   ('LE026', 'A.S.Perera', 'M', 'perera.as@ruh.ac.lk', 'No. 67, Kalmunai', '1985-07-14'),
+   ('LE027', 'L.T.Fernando', 'F', 'fernando.lt@ruh.ac.lk', 'No. 32, Ratnapura', '1988-10-21'),
+   ('LE028', 'H.P.de Silva', 'M', 'desilva.hp@ruh.ac.lk', 'No. 11, Badulla', '1975-06-30'),
+   ('LE029', 'G.W.Karunaratne', 'F', 'karunaratne.gw@ruh.ac.lk', 'No. 85, Hambantota', '1992-03-18'),
+   ('LE030', 'M.S.Ranasinghe', 'M', 'ranasinghe.ms@ruh.ac.lk', 'No. 28, Jaffna', '1979-08-25'),
+   ('LE031', 'T.R.Rajapaksa', 'M', 'rajapaksa.tr@ruh.ac.lk', 'No. 39, Kotte', '1983-05-22'),
+   ('LE032', 'N.M.Abeysinghe', 'F', 'abeysinghe.nm@ruh.ac.lk', 'No. 66, Vavuniya', '1981-12-03'),
+   ('LE033', 'S.P.Kularathna', 'F', 'kularathna.sp@ruh.ac.lk', 'No. 14, Moratuwa', '1986-02-09'),
+   ('LE034', 'W.R.Samarasinghe', 'M', 'samarasinghe.wr@ruh.ac.lk', 'No. 22, Galle', '1989-11-29'),
+   ('LE035', 'K.D.Amarasinghe', 'F', 'amarasinghe.kd@ruh.ac.lk', 'No. 8, Nugegoda', '1982-01-16');
 
    
 
