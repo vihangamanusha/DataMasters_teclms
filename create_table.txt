@@ -19,7 +19,7 @@ Theory_hours CHAR(7),
 Practical_hours CHAR(7),
 Lecture_in_charge CHAR(10),
 Department_id CHAR(10),
-PRIMARY KEY(Course_code,Department_id)   
+PRIMARY KEY(Course_code)   
 );
 
 
