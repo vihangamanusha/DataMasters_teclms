@@ -107,3 +107,25 @@ VALUES
 ('MS0004', 'TG/2022/1246', 'ENT1242', 'DpENT', '2024-10-10', '2024-09-30', '2024-09-30', 'Accident'),
 ('MS0005', 'TG/2022/1258', 'BST1242', 'DpBST', '2024-10-14', '2024-10-01', '2024-10-01', 'Medical Check-up'),
 ('MS0006', 'TG/2022/1233', 'BST1262', 'DpBST', '2024-10-15', '2024-09-18', '2024-09-18', 'Fever');
+
+
+
+
+
+
+CREATE VIEW Medical_Submission_Status AS
+SELECT 
+    Submission_id,
+    Student_id,
+    Course_code,
+    Department_id,
+    Submission_date,
+    Start_date,
+    End_date,
+    Reasons,
+    CASE 
+        WHEN Submission_date BETWEEN DATE_SUB(Start_date, INTERVAL 14 DAY) AND Start_date THEN 'Accepted'
+        ELSE 'Rejected'
+    END AS Status
+FROM 
+    Medical_submission;
