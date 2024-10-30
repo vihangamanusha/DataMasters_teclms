@@ -12,7 +12,7 @@ CREATE TABLE Student(
 	PRIMARY KEY(Student_id));                                         
 
 INSERT INTO Student
-(Student_id,NIC,Student_name,Address,Email,Phone_number,Gender,Date_of_birth,Status)
+(Student_id,NIC,Dep_id,Student_name,Address,Email,Phone_number,Gender,Date_of_birth,Status)
 VALUES
 ("TG/2021/1155",1015,"DpICT","G.B.K.Sameera","B36/1,Kamburupitiya,Mathara","sameera_20211155@fot.ruh.ac.lk","071-1234567","M","2001/07/15","repeat"),
 ("TG/2021/1293",1136,"DpENT","A.P.kamindu","279,Maradana,Colombo","kamindu_20211155@fot.ruh.ac.lk","077-9876543","M","2000/08/02","repeat"),
