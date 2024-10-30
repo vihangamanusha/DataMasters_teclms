@@ -10,10 +10,10 @@ CREATE TABLE Department (
 
 INSERT INTO Department
 VALUES
-('DpMUL','department of multidecepleanery','ABC','046-2545655','dep_mul@fot.ruh.ac.lk'),
-('DpICT','department of information and communication technology','def','046-8857625','dep_ict@fot.ruh.ac.lk'),
-('DpENT','department of engineering technology','ghi','046-2314569','dep_et@fot.ruh.ac.lk'),
-('DpBST','department of boisystem technology','jkl','046-2154698','dep_bst@fot.ruh.ac.lk')
+('DpMUL','department of multidecepleanery','B.N.S.Amrasinhe','046-2545655','dep_mul@fot.ruh.ac.lk'),
+('DpICT','department of information and communication technology','W.K.Arachchi','046-8857625','dep_ict@fot.ruh.ac.lk'),
+('DpENT','department of engineering technology','P.M.Jyasinhe','046-2314569','dep_et@fot.ruh.ac.lk'),
+('DpBST','department of boisystem technology','A.H.Gamage','046-2154698','dep_bst@fot.ruh.ac.lk')
 ;
 
 --CREATE Exam_Marks table
@@ -29,6 +29,7 @@ CREATE TABLE Exam_Marks (
     assessments INT,
     stu_id CHAR(15) NOT NULL,
     course_code CHAR(10) NOT NULL,
+
     dep_id VARCHAR(10),
     PRIMARY KEY (stu_id, course_code)
 );
