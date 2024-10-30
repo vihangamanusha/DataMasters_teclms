@@ -74,7 +74,7 @@ VALUES
 ('ICT1233', 'Server Side Web Development', 3, 'Theory/Practical', '2', '2', 'LE013', 'DpICT'),
 ('ICT1242', 'Computer Architecture', 2, 'Theory', '2', '0', 'LE014', 'DpICT'),
 ('ICT1253', 'Computer Network', 3, 'Theory/Practical', '2', '2', 'LE015', 'DpICT'),
-('TCS1212', 'Fundamentals of Management ', 2, 'Theory', '2', '0', 'LE016', 'DpICT'),
+('TCS1212', 'Fundamentals of Management ', 2, 'Theory', '2', '0', 'LE016', 'DpMUL'),
 ('TMS1233', 'Discrete Mathematics', 3, 'Theory', '3', '0', 'LE017', 'DpICT'),
 ('BST1212', 'Information Technology II', 2, 'Theory/Practical', '1', '3', 'LE018', 'DpBST'),
 ('BST1222', 'Electronics for Biosystems Technology', 2, 'Theory/Practical', '1', '3', 'LE019', 'DpBST'),
@@ -85,14 +85,12 @@ VALUES
 ('BST1272', 'Introduction to Fisheries Biology', 2, 'Theory/Practical', '1', '3', 'LE024', 'DpBST'),
 ('BST1282', 'Fundamentals in Agriculture', 2, 'Theory/Practical', '1', '3', 'LE025', 'DpBST'),
 ('ENG1232', 'English II', 2, 'Theory', '2', '0', 'LE026', 'DpMUL'),
-('TCS1212', 'Fundamentals of Management', 2, 'Theory', '2', '0', 'LE027', 'DpBST'),
 ('ENG1212', 'English II', 2, 'Theory', '2', '0', 'LE028', 'DpMUL'),
 ('ENT1211', 'Workshop Technology II', 1, 'Theory/Practical', '1', '3', 'LE029', 'DpENT'),
 ('ENT1221', 'Common Practical III(Electricity &magnetism)', 1, 'Practical', '0', '3', 'LE030', 'DpENT'),
 ('ENT1231', 'Common Practical II(Engineering Properties of Matter)', 1, 'Practical', '0', '3', 'LE031', 'DpENT'),
 ('ENT1242', 'Electricity & Magnetism', 2, 'Theory', '2', '0', 'LE032', 'DpENT'),
 ('ENT1253', 'Engineering Properties of Matter', 3, 'Theory', '2', '0', 'LE033', 'DpENT'),
-('TCS1212', 'Fundamentals of Management', 2, 'Theory', '2', '0', 'LE034', 'DpENT'),
 ('TMS1223', 'Computer Programming Techniques', 3, 'Theory/Practical', '2', '3', 'LE035', 'DpENT');
 
 
