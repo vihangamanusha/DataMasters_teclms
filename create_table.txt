@@ -129,3 +129,20 @@ SELECT
     END AS Status
 FROM 
     Medical_submission;
+
+
+
+
+    CREATE VIEW EXAM_ELIGIBILITY AS
+SELECT 
+    ca.Student_id,
+    ca.Course_code,
+    ca.Department_id,
+    CASE 
+        WHEN ca.CA_Status = 'pass' AND att.Attendance_Status = 'eligible' THEN 'eligible'
+        ELSE 'not eligible'
+    END AS Eligibility_Status
+FROM 
+    CAMARK ca
+JOIN 
+    ATTENDANCE_ELIGIBILITY att ON ca.Student_id = att.Student_id
