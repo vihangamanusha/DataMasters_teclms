@@ -18,20 +18,20 @@ VALUES
 
 --CREATE Exam_Marks table
 
-CREATE TABLE Exam_Marks (
-    quiz1 INT,
-    quiz2 INT,
-    quiz3 INT,
-    mid_practical INT,
-    mid_theory INT,
-    end_practical INT,
-    end_theory INT,
-    assessments INT,
-    stu_id CHAR(15) NOT NULL,
-    course_code CHAR(10) NOT NULL,
-
-    dep_id VARCHAR(10),
-    PRIMARY KEY (stu_id, course_code)
+CREATE TABLE Marks(
+	quiz1 INT CHECK (quiz1 >= 0 AND quiz1 <= 100),
+	quiz2 INT CHECK (quiz2 >= 0 AND quiz2 <= 100),
+	quiz3 INT CHECK (quiz3 >= 0 AND quiz3 <= 100),
+	mid_practical INT CHECK (mid_practical >= 0 AND mid_practical <= 100),
+	mid_theory INT CHECK (mid_theory >= 0 AND mid_theory <= 100),
+	end_practical INT CHECK (end_practical >= 0 AND end_practical <= 100),
+	end_theory INT CHECK (end_theory >= 0 AND end_theory <= 100),
+	assessments INT CHECK (assessments >= 0 AND assessments <= 100),
+	student_id CHAR(15),
+        course_code CHAR(10),
+        dep_id VARCHAR(10),
+        medical_submission_id CHAR(10),
+        PRIMARY KEY (student_id, course_code)
 );
 --Add BST data to Exam_Marks Table
 
