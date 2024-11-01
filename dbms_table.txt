@@ -183,7 +183,7 @@ CREATE TABLE Grade_values (
 
 
 
-INSERT INTO final_grade (grade, min_marks, max_marks, grade_point) VALUES
+INSERT INTO Grade_values (grade, min_marks, max_marks, grade_point) VALUES
 ('A+', 90, 100, 4.0),
 ('A', 85, 89, 4.0),
 ('A-', 80, 84, 3.7),
