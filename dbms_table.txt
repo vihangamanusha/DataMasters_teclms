@@ -168,3 +168,32 @@ VALUES
    ('LE093', '078-6120764'),
    ('LE095', '070-8059200');
 
+
+
+----Crate and insert grade values---
+
+
+CREATE TABLE Grade_values (
+    grade CHAR(2),
+    min_marks INT,
+    max_marks INT,
+    grade_point DECIMAL(3, 2)
+);
+
+
+
+
+INSERT INTO final_grade (grade, min_marks, max_marks, grade_point) VALUES
+('A+', 90, 100, 4.0),
+('A', 85, 89, 4.0),
+('A-', 80, 84, 3.7),
+('B+', 75, 79, 3.3),
+('B', 70, 74, 3.0),
+('B-', 65, 69, 2.7),
+('C+', 60, 64, 2.3),
+('C', 55, 59, 2.0),
+('C-', 50, 54, 1.7),
+('D+', 45, 49, 1.3),
+('D', 40, 44, 1.0),
+('E', 30, 39, 0.0),
+('F', 0, 29, 0.0);
