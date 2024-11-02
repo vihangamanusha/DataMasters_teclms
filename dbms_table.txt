@@ -26,10 +26,12 @@ ADD FOREIGN KEY(NIC) REFERENCES USER(NIC);
 CREATE TABLE Lecture_phonenumber(
     Lecture_id CHAR(6),
     Phone_number CHAR(10),
-    FOREIGN KEY(Lecture_id) REFERENCES Lecture(Lecture_id)
-
 
 );
+----add foreign key to lecture_phonenumber
+ALTER TABLE Lecture_phonenumber
+ADD FOREIGN KEY(Lecture_id) REFERENCES Lecture(Lecture_id);
+
 
 CREATE TABLE USER(
     NIC INT,
