@@ -4,8 +4,8 @@ CREATE TABLE Student_course_unit(
         PRIMARY KEY(Student_id,Course_id)
 );
 
-ALTER TABLE Student_course_unit ADD FOREIGN KEY Student_id REFERENCES Student(Student_id);
-ALTER TABLE Student_course_unit ADD FOREIGN KEY Course_id REFERENCES Course_unit(Course_code);
+ALTER TABLE Student_course_unit ADD FOREIGN KEY (Student_id) REFERENCES Student(Student_id);
+ALTER TABLE Student_course_unit ADD FOREIGN KEY (Course_id) REFERENCES Course_unit(Course_code);
 
 INSERT INTO Student_course_unit 
 (Student_id, Course_id)
