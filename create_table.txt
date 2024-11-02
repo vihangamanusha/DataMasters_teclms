@@ -48,7 +48,7 @@ CREATE TABLE Medical_submission(
 Submission_id CHAR(10),
 Student_id CHAR(15),
 Course_code CHAR(10),
-Department_id CHAR(10),
+Department_id VARCHAR(10),  
 Submission_date DATE,
 Start_date DATE,
 End_date DATE,
