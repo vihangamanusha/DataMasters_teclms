@@ -11,6 +11,10 @@ CREATE TABLE Attendence(
 	PRIMARY KEY(Session_date)
 );
 
+ALTER TABLE Attendence ADD FOREIGN KEY (Student_id) REFERENCES Student(Student_id);
+ALTER TABLE Attendence ADD FOREIGN KEY (Course_id) REFERENCES Course(Course_code);
+ALTER TABLE Attendence ADD FOREIGN KEY (Dep_id) REFERENCES Department(department_id);
+
 INSERT INTO Attendence
 (Student_id, Course_id, Dep_id, Session_date, Session_type, Att_status, Medical_id)
 VALUES
