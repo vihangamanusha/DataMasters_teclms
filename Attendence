@@ -13,7 +13,7 @@ ALTER TABLE Attendance ADD FOREIGN KEY (Student_id) REFERENCES Student(Student_i
 ALTER TABLE Attendance ADD FOREIGN KEY (Course_id) REFERENCES Course_unit(Course_code);
 ALTER TABLE Attendance ADD FOREIGN KEY (Dep_id) REFERENCES Department(department_id);
 
-INSERT INTO Attendence
+INSERT INTO Attendance
 (Student_id, Course_id, Dep_id, Session_date, Session_type, Att_status, Medical_id)
 VALUES
 ("TG/2022/1122", "ENG1222", "DpMUL", "2024-08-16", "Theory", "Present", NULL),
