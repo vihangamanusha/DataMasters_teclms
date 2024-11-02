@@ -9,11 +9,11 @@ Responsibility VARCHAR(100),
 PRIMARY KEY(Technical_officer_id)
 );
 
-ALTER TABLE 
+ALTER TABLE Technical_officer
 ADD FOREIGN KEY(Department_id)
 REFERENCES Department(department_id);
 
-ALTER TABLE 
+ALTER TABLE Technical_officer
 ADD FOREIGN KEY(NIC)
 REFERENCES USER(NIC);
 
