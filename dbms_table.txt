@@ -65,7 +65,7 @@ SELECT
         ELSE 'Not Eligible'
     END AS Eligibility
 FROM 
-    Attendence
+    Attendance
 GROUP BY 
     Student_id, 
     Course_id;
@@ -86,7 +86,7 @@ SELECT
         ELSE COUNT(*)
     END AS Adjusted_Attendance_Count
 FROM
-    Attendence
+    Attendance
 WHERE
     Att_status = 'Present'
     AND Student_id IN ('TG/2022/1122', 'TG/2022/1147', 'TG/2022/1305', 'TG/2022/1188', 'TG/2022/1190')
