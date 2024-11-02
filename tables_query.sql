@@ -231,7 +231,7 @@ INSERT INTO Marks (quiz1, quiz2, quiz3, assessments, mid_theory, mid_practical, 
 
 INSERT INTO Marks (quiz1, quiz2, quiz3, assessments, mid_theory, mid_practical, end_theory, end_practical, student_id, course_code, dep_id, medical_submission_id) VALUES
     (20, 25, 30, 35, 0, 29, 0, 30, 'TG/2021/1155', 'ICT121', 'DpICT', NULL),  
-    (88, 42, 85, 84, 87, 90, 93, 89, 'TG/2022/1122', 'ICT1233', 'DpICT', 'MS0012'),
+    (88, 42, 85, 84, 87, 90, 93, 0, 'TG/2022/1122', 'ICT1233', 'DpICT', 'MS0012'),
     (81, 80, 72, 8, 80, 78, 66, 83, 'TG/2022/1147', 'ICT1233', 'DpICT', NULL),
     (85, 88, 34, 62, 56, 80, 52, 76, 'TG/2022/1305', 'ICT1233', 'DpICT', NULL),
     (89, 90, 47, 86, 79, 91, 74, 61, 'TG/2022/1188', 'ICT1233', 'DpICT', NULL),
