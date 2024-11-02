@@ -171,17 +171,21 @@ FROM
 
 
 
+// EXAM eligibility view...
 
-    CREATE VIEW EXAM_ELIGIBILITY AS
+  CREATE VIEW Exam_eligibility_view AS
 SELECT 
-    ca.Student_id,
-    ca.Course_code,
-    ca.Department_id,
+    ca.student_id,
+    ca.course_code,
+    ca.total_ca_marks,
+    ca.eligibility_status AS CA_eligibility,
+    a.Attendance_eligibility,
     CASE 
-        WHEN ca.CA_Status = 'pass' AND att.Attendance_Status = 'eligible' THEN 'eligible'
-        ELSE 'not eligible'
-    END AS Eligibility_Status
+        WHEN ca.eligibility_status = 'MC' THEN 'MC' 
+        WHEN ca.eligibility_status = 'Eligible' AND a.Final_eligibility = 'Eligible' THEN 'ELIGIBLE'
+        ELSE 'NOT ELIGIBLE'
+    END AS Exam_Eligibility
 FROM 
-    CAMARK ca
+    CA_Marks ca
 JOIN 
-    ATTENDANCE_ELIGIBILITY att ON ca.Student_id = att.Student_id
+    Attendance_eligibility_view a ON ca.student_id = a.Student_id AND ca.course_code = a.Course_id;
