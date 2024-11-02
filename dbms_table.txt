@@ -4,13 +4,15 @@ CREATE DATABASE Group11;
 CREATE TABLE Lecture(
     NIC INT,
     Lecture_id CHAR(6),
+    Department_id VARCHAR(10), 
     Lecture_name VARCHAR(50),
     Gender CHAR(1),
     Email VARCHAR(50),
     Address VARCHAR(70),
     Birth_day DATE,
     PRIMARY KEY(Lecture_id),
-    FOREIGN KEY(NIC) REFERENCES USER(NIC)
+    FOREIGN KEY(NIC) REFERENCES USER(NIC),
+    FOREIGN KEY(Department_id) REFERENCES Department(department_id); 
     
 );
 
