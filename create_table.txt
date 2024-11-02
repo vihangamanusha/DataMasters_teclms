@@ -1,7 +1,7 @@
 CREATE TABLE Technical_officer(
 Technical_officer_id CHAR(7),
-NIC INT,
 Name VARCHAR(50),
+NIC INT,
 Email VARCHAR(50),
 Contact_number VARCHAR(12),
 Department_id CHAR(7),
@@ -67,7 +67,7 @@ REFERENCES Department(department_id);
 
 
 INSERT INTO Technical_officer 
-(Technical_officer_id, NIC, Name, Email, Contact_number, Department_id, Responsibility)
+(Technical_officer_id, Name, NIC, Email, Contact_number, Department_id, Responsibility)
 VALUES
 ('TO0001', 'A.B Amal Perera', 0001, 'amal_perera@gmail.com', '0712345678', 'DpICT', 'Lab Supervision'),
 ('TO0002', 'B.C Nimali Silva', 0002, 'nimali_silva@gmail.com', '0722345678', 'DpENT', 'Equipment Management'),
