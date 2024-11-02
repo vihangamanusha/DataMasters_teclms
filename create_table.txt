@@ -150,9 +150,9 @@ VALUES
 
 
 
+// Medical_status_view..
 
-
-CREATE VIEW Medical_Submission_Status AS
+CREATE VIEW Medical_status_view AS
 SELECT 
     Submission_id,
     Student_id,
@@ -163,7 +163,7 @@ SELECT
     End_date,
     Reasons,
     CASE 
-        WHEN Submission_date BETWEEN DATE_SUB(Start_date, INTERVAL 14 DAY) AND Start_date THEN 'Accepted'
+        WHEN Submission_date >= Start_date - INTERVAL 14 DAY AND Submission_date <= Start_date + INTERVAL 14 DAY THEN 'Accepted'
         ELSE 'Rejected'
     END AS Status
 FROM 
