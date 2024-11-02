@@ -84,7 +84,7 @@ SELECT
         WHEN Session_type = 'Theory' THEN (COUNT(*) * 2 - 1)
         WHEN Session_type = 'Practical' THEN (COUNT(*) * 2 + 1)                                                                               
         ELSE COUNT(*)
-    END AS Adjusted_Attendance_Count
+    END AS Attendance_Count
 FROM
     Attendance
 WHERE
