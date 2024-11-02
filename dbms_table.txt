@@ -42,8 +42,6 @@ CREATE TABLE USER(
 
 INSERT INTO USER
 VALUES
-   INSERT INTO USER
-VALUES
     (1020,"W.K.L.M.Kumara","Lecture"),
     (1026,"F.K.Fatheema","Lecture"),
     (2048,"S.Subramanium","Lecture"),
