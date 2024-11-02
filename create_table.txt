@@ -13,6 +13,10 @@ ALTER TABLE
 ADD FOREIGN KEY(Department_id)
 REFERENCES Department(department_id);
 
+ALTER TABLE 
+ADD FOREIGN KEY(NIC)
+REFERENCES USER(NIC);
+
 
 CREATE TABLE Course_unit(
 Course_code CHAR(10),
