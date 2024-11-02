@@ -1,4 +1,6 @@
-CREATE DATABASE project;
+CREATE DATABASE Group11;
+
+
 CREATE TABLE Lecture(
     NIC INT,
     Lecture_id CHAR(6),
