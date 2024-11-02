@@ -1,10 +1,10 @@
 CREATE TABLE Technical_officer(
 Technical_officer_id CHAR(7),
-Name VARCHAR(50),
 NIC INT,
+Name VARCHAR(50),
 Email VARCHAR(50),
 Contact_number VARCHAR(12),
-Department_id CHAR(7),
+Department_id VARCHAR(10),                 
 Responsibility VARCHAR(100),
 PRIMARY KEY(Technical_officer_id)
 );
