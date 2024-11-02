@@ -102,14 +102,16 @@ GROUP BY
 
 CREATE VIEW Attendance_eligibility_view AS
 SELECT 
-    a.student_id,
-    a.Attendance_summary_eligibility,
-    m.state AS Medical_status,
+    a.Student_id,
+    a.Course_id,
+    a.Eligibility AS Attendance_eligibility,
+    m.Status AS Medical_status,
     CASE 
-        WHEN a.Attendance_summary_eligibility = 'eligibility' OR m.state = 'Accepted' THEN 'Eligibility'
-        ELSE 'Not eligibility'
-    END AS final_eligibility
+        WHEN a.Eligibility = 'Eligible' OR m.Status = 'Accepted' THEN 'Eligible'
+        ELSE 'Not Eligible'
+    END AS Final_eligibility
 FROM 
-    Attendance_table a
-JOIN 
-    Medical_table m ON a.student_id = m.student_id;
+    Attendance_summary_view a
+LEFT JOIN 
+    Medical_status_view m ON a.Student_id = m.Student_id AND a.Course_id = m.Course_code;
+
