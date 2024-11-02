@@ -56,15 +56,15 @@ Reasons VARCHAR(100),
 PRIMARY KEY(Submission_id)
 );
 
-ALTER TABLE
+ALTER TABLE Medical_submission
 ADD FOREIGN KEY(Student_id)
 REFERENCES Student(Student_id);
 
-ALTER TABLE
+ALTER TABLE Medical_submission
 ADD FOREIGN KEY(Course_code)
 REFERENCES Course_unit(Course_code);
 
-ALTER TABLE
+ALTER TABLE Medical_submission
 ADD FOREIGN KEY(Department_id)
 REFERENCES Department(department_id);
 
