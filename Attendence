@@ -12,7 +12,7 @@ CREATE TABLE Attendance(
 );
 
 ALTER TABLE Attendance ADD FOREIGN KEY (Student_id) REFERENCES Student(Student_id);
-ALTER TABLE Attendance ADD FOREIGN KEY (Course_id) REFERENCES Course(Course_code);
+ALTER TABLE Attendance ADD FOREIGN KEY (Course_id) REFERENCES Course_unit(Course_code);
 ALTER TABLE Attendance ADD FOREIGN KEY (Dep_id) REFERENCES Department(department_id);
 
 INSERT INTO Attendence
