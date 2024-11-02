@@ -56,6 +56,11 @@ ALTER TABLE
 ADD FOREIGN KEY(Student_id)
 REFERENCES Student(Student_id);
 
+ALTER TABLE
+ADD FOREIGN KEY(Course_code)
+REFERENCES Course_unit(Course_code);
+
+
 
 INSERT INTO Technical_officer 
 (Technical_officer_id, NIC, Name, Email, Contact_number, Department_id, Responsibility)
