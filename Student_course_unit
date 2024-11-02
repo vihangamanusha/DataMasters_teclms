@@ -1,9 +1,11 @@
 CREATE TABLE Student_course_unit(
 	Student_id CHAR(15),
 	Course_id CHAR(10)
-        FOREIGN KEY Student_id REFERENCES (Student_id)Student;
-        FOREIGN KEY Course_id REFERENCES (Course_id)Course;
+       
 );
+
+ FOREIGN KEY Student_id REFERENCES (Student_id)Student;
+FOREIGN KEY Course_id REFERENCES (Course_id)Course;
 
 INSERT INTO TABLE Student_course_unit
 (Student_id,Course_id)
