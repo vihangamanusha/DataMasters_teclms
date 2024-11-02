@@ -30,6 +30,15 @@ ALTER TABLE
 ADD FOREIGN KEY(Lecture_in_charge)
 REFERENCES Lecture(Lecture_id);
 
+ALTER TABLE
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
+
+
+
+
+
 
 CREATE TABLE Medical_submission(
 Submission_id CHAR(10),
