@@ -11,10 +11,16 @@ CREATE TABLE Lecture(
     Address VARCHAR(70),
     Birth_day DATE,
     PRIMARY KEY(Lecture_id),
-    FOREIGN KEY(NIC) REFERENCES USER(NIC),
-    FOREIGN KEY(Department_id) REFERENCES Department(department_id); 
     
 );
+---foreign key for lecture
+ALTER TABLE Lecture
+ADD FOREIGN KEY(Department_id) REFERENCES Department(department_id);
+
+ALTER TABLE Lecture
+ADD FOREIGN KEY(NIC) REFERENCES USER(NIC);
+-----end-----
+
 
 
 CREATE TABLE Lecture_phonenumber(
