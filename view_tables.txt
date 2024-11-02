@@ -25,6 +25,21 @@ FROM
     Final_Marks;
 
 
+-------create view table student_cgpa---------------
+
+CREATE VIEW Student_cgpa AS
+SELECT 
+    Final_marks.Student_id,
+    SUM(Course_unit.course_credits * Final_grade.grade_point) / SUM(Course_unit.course_credits) AS CGPA
+FROM 
+    Final_marks 
+JOIN 
+    Final_grade  ON Final_marks.marks BETWEEN Final_grade.min_marks AND Final_grade.max_marks
+JOIN 
+    Course_unit  ON Final_marks.course_id = Course_unit.course_id
+WHERE Final_marks.marks NOT IN ('MC','WH')
+GROUP BY 
+    Final_marks.student_id;
 
 
 ---------procedures-------------
