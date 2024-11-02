@@ -1,7 +1,7 @@
 CREATE TABLE Student(
 	Student_id CHAR(15),
 	NIC INT,
-	Dep_id CHAR(7),
+	Dep_id VARCHAR(10),
 	Student_name VARCHAR(50),
 	Address VARCHAR(70),
 	Email VARCHAR(50),
