@@ -16,7 +16,7 @@ REFERENCES Department(department_id);
 
 CREATE TABLE Course_unit(
 Course_code CHAR(10),
-Name VARCHAR(50),
+Name VARCHAR(100),
 Credits INT,
 Course_type VARCHAR(20),
 Theory_hours CHAR(7),
