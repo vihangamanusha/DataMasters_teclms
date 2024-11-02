@@ -9,6 +9,10 @@ Responsibility VARCHAR(100),
 PRIMARY KEY(Technical_officer_id)
 );
 
+ALTER TABLE 
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
 
 CREATE TABLE Course_unit(
 Course_code CHAR(10),
