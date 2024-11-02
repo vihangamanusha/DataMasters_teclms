@@ -37,7 +37,7 @@ CREATE TABLE USER(
 
 INSERT INTO USER
 VALUES
-   (1020,"W.K.L.M.Kumara","Lecture"),
+   (1020,"W.K.L.M.Kumara","No. 25, Colombo 07","lalith.kumara@ruh.ac.lk","071-1578928","M","1980-05-15","Lecture"),
    (1026,"F.K.Fatheema","Lecture"),
    (2048,"S.Subramanium","Lecture"),
    (3048,"K.M.Mallika","Lecture"),
