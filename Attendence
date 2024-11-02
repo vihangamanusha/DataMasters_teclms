@@ -1,11 +1,11 @@
 CREATE TABLE Attendence(
 	Student_id CHAR(15),
 	Course_id CHAR(10),
-	Dep_id CHAR(7),
+	Dep_id VARCHAR(10),
 	Session_date DATE,
 	Session_type VARCHAR(20),
 	Att_status VARCHAR(10),
-	Medical_id CHAR(8),
+	Medical_id CHAR(10),
         PRIMARY KEY(Student_id),
 	PRIMARY KEY(Course_id),
 	PRIMARY KEY(Session_date)
