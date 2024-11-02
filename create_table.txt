@@ -60,6 +60,10 @@ ALTER TABLE
 ADD FOREIGN KEY(Course_code)
 REFERENCES Course_unit(Course_code);
 
+ALTER TABLE
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
 
 
 INSERT INTO Technical_officer 
