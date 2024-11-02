@@ -26,6 +26,9 @@ Department_id CHAR(10),
 PRIMARY KEY(Course_code)   
 );
 
+ALTER TABLE
+ADD FOREIGN KEY(Lecture_in_charge)
+REFERENCES Lecture(Lecture_id);
 
 
 CREATE TABLE Medical_submission(
