@@ -10,7 +10,7 @@ CREATE TABLE Lecture(
     Email VARCHAR(50),
     Address VARCHAR(70),
     Birth_day DATE,
-    PRIMARY KEY(Lecture_id),
+    PRIMARY KEY(Lecture_id)
     
 );
 ---foreign key for lecture
