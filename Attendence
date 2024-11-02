@@ -5,7 +5,10 @@ CREATE TABLE Attendence(
 	Session_date DATE,
 	Session_type VARCHAR(20),
 	Att_status VARCHAR(10),
-	Medical_id CHAR(8)
+	Medical_id CHAR(8),
+        PRIMARY KEY(Student_id),
+	PRIMARY KEY(Course_id),
+	PRIMARY KEY(Session_date)
 );
 
 INSERT INTO Attendence
