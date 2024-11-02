@@ -1,7 +1,7 @@
 CREATE TABLE Technical_officer(
 Technical_officer_id CHAR(7),
 NIC INT,
-Name VARCHAR(50),
+Name VARCHAR(100),
 Email VARCHAR(50),
 Contact_number VARCHAR(12),
 Department_id VARCHAR(10),                 
