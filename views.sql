@@ -35,7 +35,7 @@ ON
     AND exam_eligibility_view.course_code = final_marks.course_code;
 
 
---Create view student_cgpa
+--Create view student_sgpa
 
 CREATE VIEW Student_SGPA AS
 SELECT 
@@ -95,3 +95,74 @@ WHERE
     student_grades.final_exam_marks IS NOT NULL AND student_grades.final_exam_marks != 'MC'
 GROUP BY 
     student_grades.student_id;
+
+
+--CREATE VIEW Student_cgpa--
+
+CREATE VIEW Student_CGPA AS
+SELECT 
+    student_grades.student_id,
+    SUM(course_unit.credits) AS total_credits,
+    SUM(
+        CASE 
+            WHEN student_grades.final_exam_marks IS NOT NULL AND 
+                 student_grades.final_exam_marks != 'MC' AND
+                 course_unit.course_code NOT IN ('ENG1222', 'ENG1232', 'ENG1212') 
+            THEN 
+                CASE 
+                    WHEN student_grades.final_exam_marks >= 90 THEN 4.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 85 THEN 4.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 80 THEN 3.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 75 THEN 3.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 70 THEN 3.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 65 THEN 2.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 60 THEN 2.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 55 THEN 2.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 50 THEN 1.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 45 THEN 1.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 40 THEN 1.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 35 THEN 0.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 30 THEN 0.0 * course_unit.credits
+                    ELSE 0.0
+                END
+            ELSE 0.0
+        END
+    ) AS total_quality_points,
+    (SUM(
+        CASE 
+            WHEN student_grades.final_exam_marks IS NOT NULL AND 
+                 student_grades.final_exam_marks != 'MC' AND 
+                 course_unit.course_code NOT IN ('ENG1222', 'ENG1232', 'ENG1212')
+            THEN 
+                CASE 
+                    WHEN student_grades.final_exam_marks >= 90 THEN 4.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 85 THEN 4.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 80 THEN 3.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 75 THEN 3.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 70 THEN 3.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 65 THEN 2.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 60 THEN 2.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 55 THEN 2.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 50 THEN 1.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 45 THEN 1.3 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 40 THEN 1.0 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 35 THEN 0.7 * course_unit.credits
+                    WHEN student_grades.final_exam_marks >= 30 THEN 0.0 * course_unit.credits
+                    ELSE 0.0
+                END
+            ELSE 0.0
+        END) / SUM(course_unit.credits)
+    ) AS SGPA
+FROM 
+    student_grades AS student_grades
+JOIN 
+    course_unit AS course_unit 
+ON 
+    student_grades.course_code = course_unit.course_code
+WHERE 
+    student_grades.final_exam_marks IS NOT NULL 
+    AND student_grades.final_exam_marks != 'MC'
+    AND course_unit.course_code NOT IN ('ENG1222', 'ENG1232', 'ENG1212')  -- Exclude these courses
+GROUP BY 
+    student_grades.student_id;
+
