@@ -37,7 +37,7 @@ ON
 
 --Create view student_cgpa
 
-CREATE VIEW Student_CGPA AS
+CREATE VIEW Student_SGPA AS
 SELECT 
     student_grades.student_id,
     SUM(course_unit.credits) AS total_credit,
