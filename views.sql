@@ -56,7 +56,7 @@ SELECT
         Marks.end_practical * 0.3                     -- 30% weight for end practical
     ) AS final_exam_marks,
     CASE 
-        WHEN Student.status = 'suspended' THEN 'WH'
+        WHEN Student.status = 'suspend' THEN 'WH'
         WHEN Marks.medical_submission_id IS NOT NULL THEN 'MC'
         WHEN Exam_eligibility_view.Exam_Eligibility = 'Eligible' THEN 'Eligible'
         ELSE 'Not Eligible'
