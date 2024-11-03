@@ -51,7 +51,7 @@ SELECT
     Marks.student_id,
     Marks.course_code,
     (
-        LEAST(CA_Marks.total_ca_marks, 100) * 0.4 +  -- Scale CA to a maximum of 100, then apply 40% weight
+        LEAST(CA_Marks.total_ca_marks, 100) +  -- Scale CA to a maximum of 100, then apply 40% weight
         Marks.end_theory * 0.3 +                      -- 30% weight for end theory
         Marks.end_practical * 0.3                     -- 30% weight for end practical
     ) AS final_exam_marks,
