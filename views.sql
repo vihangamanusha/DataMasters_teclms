@@ -39,33 +39,59 @@ ON
 
 CREATE VIEW Student_CGPA AS
 SELECT 
-    student_id,
-    AVG(grade_points) AS CGPA
-FROM (
-    SELECT 
-        student_id,
-        CASE 
-            WHEN grade = 'A+' THEN 4.0
-            WHEN grade = 'A' THEN 4.0
-            WHEN grade = 'A-' THEN 3.7
-            WHEN grade = 'B+' THEN 3.3
-            WHEN grade = 'B' THEN 3.0
-            WHEN grade = 'B-' THEN 2.7
-            WHEN grade = 'C+' THEN 2.3
-            WHEN grade = 'C' THEN 2.0
-            WHEN grade = 'C-' THEN 1.7
-            WHEN grade = 'D+' THEN 1.3
-            WHEN grade = 'D' THEN 1.0
-            WHEN grade = 'D-' THEN 0.7
-            WHEN grade = 'E' THEN 0.0
-            WHEN grade = 'F' THEN 0.0
-            WHEN grade = 'MC' THEN 0.0
-            ELSE NULL
-        END AS grade_points
-    FROM 
-        Student_grades
-    WHERE 
-        grade IS NOT NULL  -- Exclude NULL grades for calculation
-) AS grade_points_table
+    student_grades.student_id,
+    SUM(course_unit.credits) AS total_credit,
+    SUM(CASE 
+        WHEN student_grades.final_exam_marks IS NOT NULL AND student_grades.final_exam_marks != 'MC' 
+        THEN 
+            CASE 
+                WHEN student_grades.final_exam_marks >= 90 THEN 4.0 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 85 THEN 4.0 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 80 THEN 3.7 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 75 THEN 3.3 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 70 THEN 3.0 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 65 THEN 2.7 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 60 THEN 2.3 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 55 THEN 2.0 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 50 THEN 1.7 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 45 THEN 1.3 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 40 THEN 1.0 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 35 THEN 0.7 * course_unit.credits
+                WHEN student_grades.final_exam_marks >= 30 THEN 0.0 * course_unit.credits
+                ELSE 0.0
+            END
+        ELSE 0.0
+    END) AS total_quality_points,
+    CASE 
+        WHEN SUM(course_unit.credits) > 0 THEN 
+            SUM(CASE 
+                WHEN student_grades.final_exam_marks IS NOT NULL AND student_grades.final_exam_marks != 'MC' 
+                THEN 
+                    CASE 
+                        WHEN student_grades.final_exam_marks >= 90 THEN 4.0 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 85 THEN 4.0 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 80 THEN 3.7 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 75 THEN 3.3 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 70 THEN 3.0 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 65 THEN 2.7 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 60 THEN 2.3 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 55 THEN 2.0 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 50 THEN 1.7 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 45 THEN 1.3 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 40 THEN 1.0 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 35 THEN 0.7 * course_unit.credits
+                        WHEN student_grades.final_exam_marks >= 30 THEN 0.0 * course_unit.credits
+                        ELSE 0.0
+                    END
+                ELSE 0.0
+            END) / SUM(course_unit.credits)
+        ELSE NULL 
+    END AS CGPA
+FROM 
+    student_grades AS student_grades
+JOIN 
+    course_unit AS course_unit ON student_grades.course_code = course_unit.course_code
+WHERE 
+    student_grades.final_exam_marks IS NOT NULL AND student_grades.final_exam_marks != 'MC'
 GROUP BY 
-    student_id;
+    student_grades.student_id;
