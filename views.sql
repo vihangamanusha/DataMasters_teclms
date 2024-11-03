@@ -33,3 +33,39 @@ LEFT JOIN
 ON 
     exam_eligibility_view.student_id = final_marks.student_id 
     AND exam_eligibility_view.course_code = final_marks.course_code;
+
+
+--Create view student_cgpa
+
+CREATE VIEW Student_CGPA AS
+SELECT 
+    student_id,
+    AVG(grade_points) AS CGPA
+FROM (
+    SELECT 
+        student_id,
+        CASE 
+            WHEN grade = 'A+' THEN 4.0
+            WHEN grade = 'A' THEN 4.0
+            WHEN grade = 'A-' THEN 3.7
+            WHEN grade = 'B+' THEN 3.3
+            WHEN grade = 'B' THEN 3.0
+            WHEN grade = 'B-' THEN 2.7
+            WHEN grade = 'C+' THEN 2.3
+            WHEN grade = 'C' THEN 2.0
+            WHEN grade = 'C-' THEN 1.7
+            WHEN grade = 'D+' THEN 1.3
+            WHEN grade = 'D' THEN 1.0
+            WHEN grade = 'D-' THEN 0.7
+            WHEN grade = 'E' THEN 0.0
+            WHEN grade = 'F' THEN 0.0
+            WHEN grade = 'MC' THEN 0.0
+            ELSE NULL
+        END AS grade_points
+    FROM 
+        Student_grades
+    WHERE 
+        grade IS NOT NULL  -- Exclude NULL grades for calculation
+) AS grade_points_table
+GROUP BY 
+    student_id;
