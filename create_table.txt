@@ -1,0 +1,191 @@
+CREATE TABLE Technical_officer(
+Technical_officer_id CHAR(7),
+NIC INT,
+Name VARCHAR(100),
+Email VARCHAR(50),
+Contact_number VARCHAR(12),
+Department_id VARCHAR(10),                 
+Responsibility VARCHAR(100),
+PRIMARY KEY(Technical_officer_id)
+);
+
+ALTER TABLE Technical_officer
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
+ALTER TABLE Technical_officer
+ADD FOREIGN KEY(NIC)
+REFERENCES USER(NIC);
+
+
+CREATE TABLE Course_unit(
+Course_code CHAR(10),
+Name VARCHAR(100),
+Credits INT,
+Course_type VARCHAR(20),
+Theory_hours CHAR(7),
+Practical_hours CHAR(7),
+Lecture_in_charge CHAR(6),    
+Department_id VARCHAR(10),    
+PRIMARY KEY(Course_code)   
+);
+
+ALTER TABLE Course_unit
+ADD FOREIGN KEY(Lecture_in_charge)
+REFERENCES Lecture(Lecture_id);
+
+ALTER TABLE Course_unit
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
+
+
+
+
+
+
+CREATE TABLE Medical_submission(
+Submission_id CHAR(10),
+Student_id CHAR(15),
+Course_code CHAR(10),
+Department_id VARCHAR(10),  
+Submission_date DATE,
+Start_date DATE,
+End_date DATE,
+Reasons VARCHAR(100),
+PRIMARY KEY(Submission_id)
+);
+
+ALTER TABLE Medical_submission
+ADD FOREIGN KEY(Student_id)
+REFERENCES Student(Student_id);
+
+ALTER TABLE Medical_submission
+ADD FOREIGN KEY(Course_code)
+REFERENCES Course_unit(Course_code);
+
+ALTER TABLE Medical_submission
+ADD FOREIGN KEY(Department_id)
+REFERENCES Department(department_id);
+
+
+
+INSERT INTO Technical_officer 
+(Technical_officer_id, Name, NIC, Email, Contact_number, Department_id, Responsibility)
+VALUES
+('TO0001', 'A.B Amal Perera', 0001, 'amal_perera@gmail.com', '0712345678', 'DpICT', 'Lab Supervision'),
+('TO0002', 'B.C Nimali Silva', 0002, 'nimali_silva@gmail.com', '0722345678', 'DpENT', 'Equipment Management'),
+('TO0003', 'C.C Kamal Rajapaksa', 0003, 'kamal_rajapaksa@gmail.com', '0714567890', 'DpBST', 'Technical Support'),
+('TO0004', 'W.P.C Dilani Fernando', 0004, 'dilani_fernando@gmail.com', '0725678901', 'DpICT', 'Technical Support'),
+('TO0005', 'B.S.H Shantha Kumar', 0005, 'shantha_kumar@gmail.com', '0756789012', 'DpENT', 'Technical Support'),
+('TO0006', 'S.S Pavani Weerakoon', 0006, 'pavani_weerakoon@gmail.com', '0757890123', 'DpBST', 'Database Administration'),
+('TO0007', 'D.G Tharindu Jayasinghe', 0007, 'tharindu_jayasinghe@gmail.com', '0778901234', 'DpICT', 'Database Administration'),
+('TO0008', 'A.K Anushka Dias', 0008, 'anushka_dias@gmail.com', '0789012345', 'DpENT', 'Database Administration'),
+('TO0009', 'P.L.M Buddhika Wickramasinghe',0009, 'buddhika_wickramasinghe@gmail.com', '0780123456', 'DpBST', 'Lab Supervision'),
+('TO0010', 'S.K Lasantha Abeywardena', 0010, 'lasantha_abeywardena@gmail.com', '0701234567', 'DpICT', 'Lab Supervision'),
+('TO0011', 'C.W.E Chathurika De Silva', 0011, 'chathurika_desilva@gmail.com', '0712345679', 'DpENT', 'Lab Supervision'),
+('TO0012', 'E.M Ravi Jayawardena', 0012, 'ravi_jayawardena@gmail.com', '0723456780', 'DpBST', 'Technical Support'),
+('TO0013', 'E.K Sewwandi Perera', 0013, 'Sewwandi_perera@gmail.com', '0754567891', 'DpICT', 'Technical Support'),
+('TO0014', 'T.M Gihan Senanayake', 0014, 'gihan_senanayake@gmail.com', '0755678902', 'DpENT', 'Technical Support'),
+('TO0015', 'R.P Nadeesha Pathirana', 0015, 'nadeesha_pathirana@gmail.com', '0756789013', 'DpBST', 'Equipment Management'),
+('TO0016', 'W.S Kavindu Perera', 0016, 'kavindu_perera@gmail.com', '0761234567', 'DpICT', 'Database Administration'),
+('TO0017', 'P.C.P Chami Wickramasinghe', 0017, 'chami_wickramasinghe@gmail.com', '0772345678', 'DpENT', 'Database Administration'),
+('TO0018', 'D.D Dilantha Jayaratne', 0018, 'dilantha_jayaratne@gmail.com', '0783456789', 'DpBST', 'Database Administration'),
+('TO0019', 'N.S Nethmi Abeysekara', 0019, 'nethmi_abeysekara@gmail.com', '0724567890', 'DpICT', 'Technical Support'),
+('TO0020', 'W.K.L Sanjay Gamage', 0020, 'sanjay_gamage@gmail.com', '0705678901', 'DpENT', 'Technical Support');
+
+
+
+
+
+INSERT INTO Course_unit
+(Course_code, Name, Credits, Course_type, Theory_hours, Practical_hours, Lecture_in_charge, Department_id)
+VALUES
+('ENG1222', 'English II', 2, 'Theory', '2', '0', 'LE010', 'DpMUL'),
+('ENG1232', 'English II', 2, 'Theory', '2', '0', 'LE011', 'DpMUL'),
+('ENG1212', 'English II', 2, 'Theory', '2', '0', 'LE012', 'DpMUL'),
+('TCS1212', 'Fundamentals of Management ', 2, 'Theory', '2', '0', 'LE013', 'DpMUL'),
+('ICT1212', 'Database Management Systems', 2, 'Theory', '2', '0', 'LE014', 'DpICT'),
+('ICT1222', 'Database Management System Practicum', 2, 'Practical', '0', '4', 'LE015', 'DpICT'),
+('ICT1233', 'Server Side Web Development', 3, 'Theory/Practical', '2', '2', 'LE016', 'DpICT'),
+('ICT1242', 'Computer Architecture', 2, 'Theory', '2', '0', 'LE017', 'DpICT'),
+('ICT1253', 'Computer Network', 3, 'Theory/Practical', '2', '2', 'LE018', 'DpICT'),
+('TMS1233', 'Discrete Mathematics', 3, 'Theory', '3', '0', 'LE019', 'DpICT'),
+('BST1212', 'Information Technology II', 2, 'Theory/Practical', '1', '3', 'LE020', 'DpBST'),
+('BST1222', 'Electronics for Biosystems Technology', 2, 'Theory/Practical', '1', '3', 'LE021', 'DpBST'),
+('BST1232', 'Organic Chemistry', 2, 'Theory/Practical', '1', '3', 'LE022', 'DpBST'),
+('BST1242', 'Basic Biochemistry', 2, 'Theory/Practical', '1', '3', 'LE023', 'DpBST'),
+('BST1251', 'Fundamental Genetics', 1, 'Theory', '1', '0', 'LE024', 'DpBST'),
+('BST1262', 'Basic Microbiology', 2, 'Theory/Practical', '1', '3', 'LE025', 'DpBST'),
+('BST1272', 'Introduction to Fisheries Biology', 2, 'Theory/Practical', '1', '3', 'LE026', 'DpBST'),
+('BST1282', 'Fundamentals in Agriculture', 2, 'Theory/Practical', '1', '3', 'LE027', 'DpBST'),
+('ENT1211', 'Workshop Technology II', 1, 'Theory/Practical', '1', '3', 'LE028', 'DpENT'),
+('ENT1221', 'Common Practical III(Electricity &magnetism)', 1, 'Practical', '0', '3', 'LE029', 'DpENT'),
+('ENT1231', 'Common Practical II(Engineering Properties of Matter)', 1, 'Practical', '0', '3', 'LE030', 'DpENT'),
+('ENT1242', 'Electricity & Magnetism', 2, 'Theory', '2', '0', 'LE031', 'DpENT'),
+('ENT1253', 'Engineering Properties of Matter', 3, 'Theory', '2', '0', 'LE032', 'DpENT'),
+('TMS1223', 'Computer Programming Techniques', 3, 'Theory/Practical', '2', '3', 'LE033', 'DpENT');
+
+
+
+
+
+
+INSERT INTO Medical_submission 
+(Submission_id, Student_id, Course_code, Department_id, Submission_date, Start_date, End_date, Reasons)
+VALUES
+('MS0001', 'TG/2022/1122', 'ICT1212', 'DpICT', '2024-10-01', '2024-08-20', '2024-08-20', 'Attendence'),
+('MS0002', 'TG/2022/1147', 'ICT1242', 'DpICT', '2024-10-04', '2024-10-03', '2024-10-03', 'Attendence'),
+('MS0003', 'TG/2022/1105', 'ENT1221', 'DpENT', '2024-10-08', '2024-09-10', '2024-09-10', 'Attendence'),
+('MS0004', 'TG/2022/1246', 'ENT1242', 'DpENT', '2024-10-10', '2024-09-30', '2024-09-30', 'Attendence'),
+('MS0005', 'TG/2022/1258', 'BST1242', 'DpBST', '2024-10-14', '2024-10-01', '2024-10-01', 'Attendence'),
+('MS0006', 'TG/2022/1233', 'BST1262', 'DpBST', '2024-10-15', '2024-09-18', '2024-09-18', 'Attendence'),
+('MS0007', 'TG/2022/1177', 'BST1212', 'DpBST', '2024-11-20', '2024-11-18', '2024-11-18', 'Exam'),
+('MS0008', 'TG/2022/1195', 'BST1242', 'DpBST', '2024-11-22', '2024-11-20', '2024-11-20', 'Exam'),
+('MS0009', 'TG/2022/1325', 'ENT1211', 'DpENT', '2024-11-21', '2024-11-19', '2024-11-19', 'Exam'),
+('MS0010', 'TG/2022/1210', 'ENT1231', 'DpENT', '2024-11-27', '2024-11-25', '2024-11-25', 'Exam'),
+('MS0011', 'TG/2022/1305', 'ICT1222', 'DpICT', '2024-11-28', '2024-11-26', '2024-11-26', 'Exam'),
+('MS0012', 'TG/2022/1122', 'ICT1233', 'DpICT', '2024-11-29', '2024-11-27', '2024-11-27', 'Exam');
+
+
+
+
+// Medical_status_view..
+
+CREATE VIEW Medical_status_view AS
+SELECT 
+    Submission_id,
+    Student_id,
+    Course_code,
+    Department_id,
+    Submission_date,
+    Start_date,
+    End_date,
+    Reasons,
+    CASE 
+        WHEN Submission_date >= Start_date - INTERVAL 14 DAY AND Submission_date <= Start_date + INTERVAL 14 DAY THEN 'Accepted'
+        ELSE 'Rejected'
+    END AS Status
+FROM 
+    Medical_submission;
+
+
+
+// EXAM eligibility view...
+
+  CREATE VIEW Exam_eligibility_view AS
+SELECT 
+    ca.student_id,
+    ca.course_code,
+    ca.total_ca_marks,
+    ca.eligibility_status AS CA_eligibility,
+    a.Attendance_eligibility,
+    CASE 
+        WHEN ca.eligibility_status = 'MC' THEN 'MC' 
+        WHEN ca.eligibility_status = 'Eligible' AND a.Final_eligibility = 'Eligible' THEN 'ELIGIBLE'
+        ELSE 'NOT ELIGIBLE'
+    END AS Exam_Eligibility
+FROM 
+    CA_Marks ca
+JOIN 
+    Attendance_eligibility_view a ON ca.student_id = a.Student_id AND ca.course_code = a.Course_id;
