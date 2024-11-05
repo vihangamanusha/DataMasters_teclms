@@ -86,7 +86,7 @@ SELECT
                 ELSE 0.0
             END) / SUM(course_unit.credits)
         ELSE NULL 
-    END AS CGPA
+    END AS SGPA
 FROM 
     student_grades AS student_grades
 JOIN 
@@ -152,7 +152,7 @@ SELECT
                 END
             ELSE 0.0
         END) / SUM(course_unit.credits)
-    ) AS SGPA
+    ) AS CGPA
 FROM 
     student_grades AS student_grades
 JOIN 
