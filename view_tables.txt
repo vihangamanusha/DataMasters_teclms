@@ -1,37 +1,8 @@
-----------------create view table final grade -----------------------
-
-CREATE VIEW Student_grades AS
-SELECT 
-   Final_Marks.student_id,
-   Final_Marks.course_code,
-   Final_Marks.total_marks,
-   CASE
-     WHEN total_marks>=90 THEN 'A+'
-     WHEN total_marks>=85 THEN 'A'
-     WHEN total_marks>=80 THEN 'A-'
-     WHEN total_marks>=75 THEN 'B+'
-     WHEN total_marks>=70 THEN 'B'
-     WHEN total_marks>=65 THEN 'B-'
-     WHEN total_marks>=60 THEN 'C+'
-     WHEN total_marks>=55 THEN 'C'
-     WHEN total_marks>=50 THEN 'C-'
-     WHEN total_marks>=45 THEN 'D+'
-     WHEN total_marks>=40 THEN 'D+'
-     WHEN total_marks>=35 THEN 'D'
-     WHEN total_marks>=30 THEN 'E'
-     ELSE 'F'
-   END AS grade
-FROM 
-    Final_Marks;
-
-
 
 
 ---------procedures-------------
 
 
-
-------start to create final_mark------
 
 CREATE PROCEDURE Final_mark(IN tg CHAR(15))
 BEGIN
@@ -43,8 +14,6 @@ END//
 
 
 
-------start to create final_mark-------
-
 CREATE PROCEDURE Final_grade(IN tg CHAR(15))
 BEGIN
     SELECT *
@@ -54,3 +23,19 @@ END//
 
 -----CALL Final_grade('TG/2022/1233')---
 
+CREATE PROCEDURE Final_sgpa(IN tg CHAR(15))
+BEGIN
+    SELECT 
+    student_id,SGPA
+    FROM Student_SGPA
+    WHERE student_id=tg;
+END//
+
+
+CREATE PROCEDURE Final_cgpa(IN tg CHAR(15))
+BEGIN
+    SELECT  
+    student_id,CGPA
+    FROM Student_CGPA
+    WHERE student_id=tg;
+END//
